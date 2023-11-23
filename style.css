@@ -1,0 +1,33 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+}
+
+.popup-container {
+    width: 300px;
+}
+
+.popup-header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.popup-content {
+    padding: 10px;
+}
+
+.fees-info {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.visit-website {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.visit-website:hover {
+    text-decoration: underline;
+}
