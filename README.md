@@ -21,7 +21,7 @@ For a detailed understanding of the assignment requirements and problems, refer 
 ## Dataset
   The information utilized pertains to master's degree programs and has been extracted from the following [link](https://www.findamasters.com/masters-degrees/msc-degrees/). This dataset encompasses details such as course location, country, start date, tuition fees, online modality, availability of part-time and full-time options, along with a comprehensive course description and additional pertinent information.
 
-  You can find the dataset used in question 3 for the custom scoring function in this [link]([https://www.findamasters.com/masters-degrees/msc-degrees/](https://www.kaggle.com/datasets/joebeachcapital/qs-world-university-rankings-2024)).
+  You can find the dataset used in question 3 for the custom scoring function in this [link](https://www.kaggle.com/datasets/joebeachcapital/qs-world-university-rankings-2024).
 
 ## Repo content
 
