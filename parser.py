@@ -3,6 +3,7 @@ import re
 import csv
 
 def getAdministration(s):
+    #Get the administration if exists
     try:
         administration = s[-1]
     except IndexError:
@@ -10,6 +11,7 @@ def getAdministration(s):
     return administration
 
 def getNamefromRegExpr(atrr, script_tags):
+    #Get the name using Regular Expressions
     pattern = re.compile(r'DataLayerManager\.{}\s*=\s*"([^"]+)"'.format(atrr))
     val = ""
     for script_tag in script_tags:
@@ -20,6 +22,7 @@ def getNamefromRegExpr(atrr, script_tags):
     return val
 
 def getDescription(soup):
+    #Get description if exists
     description_section = soup.find('div', class_='course-sections__description')
     if description_section:
         description_title = description_section.find('h2', class_='course-sections__title').text
@@ -29,6 +32,7 @@ def getDescription(soup):
         return ""
     
 def getFees(soup):
+    #Get fees if exists
     fees_section = soup.find('div', class_='course-sections__fees')
     if fees_section:
         fees_title = fees_section.find('h2', class_='course-sections__title').text
@@ -45,6 +49,7 @@ def main():
     master = 0
     masters = []
     for folder in folder_names:
+        #Different method to extract the number of page if this has 1, 2 or 3 numbers
         for i in range(15):
             if master < 135:
                 num_folder = folder[-1]
@@ -58,6 +63,7 @@ def main():
             
             soup = BeautifulSoup(html_content, 'html.parser')
 
+            #Get all attributes
             script_tags = soup.find_all('script')
             courseName = soup.title.text.strip().split(' at ')[0]
             universityName = getNamefromRegExpr("dynamicInstitutionName", script_tags)
@@ -67,19 +73,26 @@ def main():
             startDate = getNamefromRegExpr("dynamicStudyTerms", script_tags)
             fees = getFees(soup)
             modality = getNamefromRegExpr("dynamicProgrammeTypes", script_tags)
+            
             duration_elem = soup.find('span', class_='key-info__duration')
+            #Get duration if exists
             if duration_elem:
                 duration = duration_elem.text.strip()
             else:
                 duration = ""
+            
+            #Get city if exists
             city_elem = soup.find('a', class_='course-data__city')
             if city_elem:
                 city = city_elem.text.strip()
             else:
                 city = ""
+
             country = getNamefromRegExpr("dynamicLocationCountryName", script_tags)
             administration = getAdministration(getNamefromRegExpr("dynamicStudyTypes", script_tags).split(","))
             url_e = soup.find('link', rel='canonical')
+            
+            #Get URL if it is possible
             if url_e:
                 url = url_e.get('href', 'URL not available')
             else:
