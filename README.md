@@ -21,10 +21,11 @@ For a detailed understanding of the assignment requirements and problems, refer 
 ## Dataset
   The information utilized pertains to master's degree programs and has been extracted from the following [link](https://www.findamasters.com/masters-degrees/msc-degrees/). This dataset encompasses details such as course location, country, start date, tuition fees, online modality, availability of part-time and full-time options, along with a comprehensive course description and additional pertinent information.
 
+  You can find the dataset used in question 3 for the custom scoring function in this [link]([https://www.findamasters.com/masters-degrees/msc-degrees/](https://www.kaggle.com/datasets/joebeachcapital/qs-world-university-rankings-2024)).
 
 ## Repo content
 
-- **engine.ipynb:** A comprehensive Jupyter notebook that presents a detailed analysis of the data. It includes a systematic breakdown of the analysis process, the resulting insights, and accompanying explanations to give a better understanding of the findings.
+- **main.ipynb:** A comprehensive Jupyter notebook that presents a detailed analysis of the data. It includes a systematic breakdown of the analysis process, the resulting insights, and accompanying explanations to give a better understanding of the findings.
 - **AQ.py:** The script employed for addressing the algorithmic task. it can also be found in the Jupyter Notebook.
 - **crawler.py:** script for scrapping data from the website. it can also be found in the Jupyter Notebook.
 - **parser.py:** script for parsing the scrapped data. it can also be found in the Jupyter Notebook.
