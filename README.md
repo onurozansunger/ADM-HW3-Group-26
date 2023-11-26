@@ -9,7 +9,7 @@ In this assignment, Data on available master's degree programs in different regi
 The goal is to carry out the following tasks:
 
   - **Data Collection:** the data of the master's degrees were scrapped from the first 400 pages on the following [link](https://www.findamasters.com/masters-degrees/msc-degrees/).
-  - ** Search Engines:** Three distinct search engines have been constructed, each employing a unique approach. The initial engine processes the user's query by searching for the query words within the course description. The second engine, employing TF-IDF and cosine similarity, ranks retrieved data based on the similarity between the course description and the entered query. The third engine executes the query using a custom-defined scoring function.
+  - **Search Engines:** Three distinct search engines have been constructed, each employing a unique approach. The initial engine processes the user's query by searching for the query words within the course description. The second engine, employing TF-IDF and cosine similarity, ranks retrieved data based on the similarity between the course description and the entered query. The third engine executes the query using a custom-defined scoring function.
   - **Complex Querying:** adding filtering capabilities to the search engine for more accurate results.
   - **Command Line Task:** Integrating the scrapped data and providing some statistics using command line prompts only.
   - **Algorithmic Task:** Implementation and Analysis of the time complexity of a certain algorithm. 
